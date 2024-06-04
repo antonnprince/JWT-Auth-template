@@ -2,9 +2,9 @@
   "type": "module",
   "name": "y",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "server2.js",
   "scripts": {
-    "dev":"nodemon server.js ",
+    "dev":"nodemon server2.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

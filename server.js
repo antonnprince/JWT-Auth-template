@@ -28,6 +28,9 @@ app.post('/login', (req,res)=>{
     res.json({accessToken:accessToken})
 })
 
+// sales_token
+// jwt.verify(token, sales_token)
+
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
@@ -36,7 +39,8 @@ function authenticateToken(req, res, next) {
     jwt.verify(token, process.env.ACCESS_TOKEN, (err, user) => {
       console.log(err)
       if (err) return res.sendStatus(403)
-        else{req.user = user}
+      else
+      {req.user=user}
       
       next()
     })
